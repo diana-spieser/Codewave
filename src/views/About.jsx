@@ -4,7 +4,7 @@ import { AboutUs, AboutUsHeading } from '../components/about/AboutUsHeading';
 import { AboutUsAvatar } from '../components/about/AboutUsAvatar';
 import { AboutUsText } from '../components/about/AboutUsText';
 import AboutSlideContent from '../components/about/AboutSlideContent';
-import teamMembers from '../components/about/TeamMembers';
+import teamMembers from '../components/about/teamMembers.js';
 import {
   Box,
   Heading,
