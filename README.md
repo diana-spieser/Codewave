@@ -1,29 +1,29 @@
-![CodeWave](./codewave/src/assets/logo.png)
-# CodeWave Forum Documentation 
+![CodeWave](./src/assets/logo.png)
+# CodeWave Forum Documentation
 
 
 Welcome to the comprehensive documentation for the "CodeWave Forum" project. This guide presents an in-depth exploration of the project's purpose, functional specifications, technical intricacies, and the potential inclusion of optional features.
 
-![Landing Page](./codewave/src/assets/landingPage.jpg)
+![Landing Page](./src/assets/landingPage.jpg)
 
 
 
-![Posts](./codewave/src/assets/posts.jpg)
+![Posts](./src/assets/posts.jpg)
 
 
 
-![PostsWhite](./codewave/src/assets/postsWhite.jpg)
+![PostsWhite](./src/assets/postsWhite.jpg)
 
 
 
-![SinglePost](./codewave/src/assets/singlePage.jpg)
+![SinglePost](./src/assets/singlePage.jpg)
 
 
 
-![SinglePost](./codewave/src/assets/news.jpg)
+![SinglePost](./src/assets/news.jpg)
 
 
-![SinglePost](./codewave/src/assets/profile.jpg)
+![SinglePost](./src/assets/profile.jpg)
 
 
 
@@ -39,7 +39,7 @@ The CodeWave Forum is a dynamic web-based platform designed to cultivate engagin
 ### User
 
 > Each user profile necessitates a first and last name, alongside either an email or username.
-    
+
 > First and last names are confined within a character range of 4 to 32.
 
 > Email entries must be both valid and unique within the system.
@@ -49,7 +49,7 @@ The CodeWave Forum is a dynamic web-based platform designed to cultivate engagin
 > Admin profiles mirror user attributes, comprising of first and last names, and a unique email.
 
 > Optional inclusion of a phone number is available.
-    
+
 > Name constraints of 4 to 32 characters apply.
 
 > Unique email requirement remains.
@@ -59,13 +59,13 @@ The CodeWave Forum is a dynamic web-based platform designed to cultivate engagin
 > Every post is associated with a creator user, a title, content, comments, and an indication of likes received.
 
 > Titles are constrained to a length ranging from 16 to 64 characters.
-    
+
 > Content occupies a length window of 32 to 8192 characters.
 
 ## Public Interface
 
 > The homepage showcases pivotal platform statistics, including user counts and total posts, welcoming anonymous users.
-   
+
 > Registration and login functionality is accessible to anonymous visitors.
 
 > Anonymous users are privy to lists of the top 10 most commented posts and the 10 most recently created posts.
@@ -75,15 +75,15 @@ The CodeWave Forum is a dynamic web-based platform designed to cultivate engagin
 > Authenticated users enjoy seamless login and logout capabilities.
 
 > Browsing of posts created by fellow users, complete with sorting and filtering options.
-    
+
 > Comprehensive post viewing, encompassing title, content, comments, and likes. This interface further facilitates actions like commenting, liking, and direct editing.
-    
+
 > Profile enhancements, including the ability to upload a personalized profile photo.
-    
+
 > Post creation is streamlined with minimum title and content prerequisites.
-    
+
 > User-exclusive post and comment editing.
-    
+
 > A customizable viewing experience for a user's own posts and comments or those authored by others, with comprehensive filtering and sorting controls.
 
 > Independent post removal capability.
@@ -117,11 +117,11 @@ The CodeWave Forum is a dynamic web-based platform designed to cultivate engagin
  > The spirit of KISS (Keep It Simple and Straightforward), SOLID, and DRY (Don't Repeat Yourself) principles guides the codebase.
 
  > Functional programming principles, including pure functions and judicious use of array methods, are seamlessly integrated.
- 
+
  > A structured project architecture, featuring distinct layers, ensures clarity and scalability.
- 
+
  > Exception handling is meticulously implemented, maintaining a graceful error propagation mechanism.
- 
+
  >   Git serves as the chosen version control system, preserving a detailed commit history capturing project evolution and the contributions of all team members.
 
 ### Firebase Realtime Database
@@ -136,7 +136,7 @@ The CodeWave Forum is a dynamic web-based platform designed to cultivate engagin
 > Integration with a Continuous Integration (CI) server, such as GitLab's CI, affords the benefits of automated unit testing upon every commit to the master branch.
 
 > Git workflow emphasizes the use of branches for seamless collaboration.
-   
+
 > An ambitious goal of hosting the complete application on Firebase, incorporating both the Firebase Realtime Database and Firebase Hosting, sets the stage for a unified user experience.
 
 ## Hosting and Setup
@@ -176,22 +176,22 @@ npm run dev
 ├── categories
 │   ├── csharp
 |   ├── java
-│   ├── javascript 
+│   ├── javascript
 |   ├── others
-│ 
+│
 ├── comments
 │   ├── commentId
-│       ├── authorId: {string} 
+│       ├── authorId: {string}
 │       ├── content: {string}
 │       ├── createdOn: {number/date}
 │       ├── likedBy{string}:
-│       │   ├── userHandle{string}: {bool} 
-│       ├── postId: {string}   
-│       ├── userName: {string}   
+│       │   ├── userHandle{string}: {bool}
+│       ├── postId: {string}
+│       ├── userName: {string}
 |
 ├── posts
 │   ├── postId
-│       ├── authorId: {string} 
+│       ├── authorId: {string}
 │       ├── categoryId: {string}
 │       ├── comments{string}:
 │       │   ├── commentId{string}: true
@@ -199,26 +199,26 @@ npm run dev
 │       ├── createdOn: {number/date}
 │       ├── likedBy{string}:
 │       │   ├── userHandle{string}: true
-│       ├── photoUrl: {string}   
+│       ├── photoUrl: {string}
 │       ├── tags{string}:
-│       │   ├── tag{string}: {bool} 
-│       ├── title: {string}   
-│       ├── userName: {string} 
+│       │   ├── tag{string}: {bool}
+│       ├── title: {string}
+│       ├── userName: {string}
 |
 ├── users
 │   ├── userName
 │       ├── createdOn: {number/date}
-│       ├── email: {string} 
-│       ├── firstName: {string} 
-│       ├── isBlocked: {bool} 
-│       ├── lastName: {string} 
+│       ├── email: {string}
+│       ├── firstName: {string}
+│       ├── isBlocked: {bool}
+│       ├── lastName: {string}
 │       ├── likedComments{string}:
-│       │   ├── commentId{string}: {bool} 
+│       │   ├── commentId{string}: {bool}
 │       ├── likedPosts{string}:
-│       │   ├── postId{string}: {bool} 
+│       │   ├── postId{string}: {bool}
 │       ├── role: {string}
 │       ├── uid: {string}
-│       ├── userName: {string} 
+│       ├── userName: {string}
 
 ```
 
@@ -226,4 +226,3 @@ npm run dev
 ## Hosting the Project
 
 If you decide to host the entire application on Firebase, follow the Firebase documentation to set up Firebase Hosting and Firebase Realtime Database. Update the necessary Firebase configuration in your project to connect to Firebase services.
-
