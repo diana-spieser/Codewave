@@ -1,0 +1,27 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": true,
+    "posts": {
+      ".indexOn": ["authorId", "createdOn"],
+      "$postId": {
+        ".read": "auth != null",
+        ".write": "auth != null && (data.child('authorId').val() === auth.uid || newData.child('authorId').val() === auth.uid)"
+      }
+    },
+    "comments": {
+      ".indexOn": ["postId", "createdOn"],
+      "$commentId": {
+        ".read": "auth != null",
+        ".write": "auth != null && (data.child('authorId').val() === auth.uid || newData.child('authorId').val() === auth.uid)"
+      }
+    },
+    "users": {
+      ".indexOn": ["uid","userName"],
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid"
+      }
+    }
+  }
+}
