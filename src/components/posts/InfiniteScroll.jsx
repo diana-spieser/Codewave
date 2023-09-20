@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
- function useInfiniteScroll  (initialVisiblePosts, postsPerLoad, postsArray) {
+ function UseInfiniteScroll  (initialVisiblePosts, postsPerLoad, postsArray) {
   const [visiblePosts, setVisiblePosts] = useState(initialVisiblePosts);
 
   const loadMorePosts = useCallback(() => {
@@ -28,4 +28,4 @@ import { useState, useEffect, useCallback } from 'react';
   return { visiblePostsArray, loadMorePosts };
 }
 
-export default useInfiniteScroll;
+export default UseInfiniteScroll;

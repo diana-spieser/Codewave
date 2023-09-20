@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { VStack, Wrap, WrapItem, Flex } from '@chakra-ui/react';
 import { PostFilter } from './PostChakraComponents';
-import useInfiniteScroll from './infiniteScroll';
+import UseInfiniteScroll from './InfiniteScroll';
 import PostTable from './PostTable';
 import { getAllPosts } from '../../services/post.services.js';
 import { sortPostsByDate } from '../../common/sortingFunctions';
@@ -35,7 +35,7 @@ const AllPosts = () => {
     setSelectedCategory(category);
   };
 
-  const { visiblePostsArray } = useInfiniteScroll(10, 5, posts);
+  const { visiblePostsArray } = UseInfiniteScroll(10, 5, posts);
 
   return (
     <VStack py={8} maxW="100%" alignItems="stretch">
