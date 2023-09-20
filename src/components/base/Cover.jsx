@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import IMAGES from '../../assets/Images';
-import CustomStatGroup from './customStatsGroup.js';
+import CustomStatGroup from './CustomStatsGroup';
 import useStats from '../../hooks/useStats';
 import { useContext } from 'react';
 import { AuthContext } from '../../context/authentication-context';
