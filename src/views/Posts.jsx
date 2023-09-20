@@ -1,6 +1,6 @@
 import AllPosts from '../components/posts/AllPosts';
 import PageHeader from '../components/base/PageHeader';
-import CustomStatGroup from '../components/base/customStatsGroup';
+import CustomStatGroup from '../components/base/customStatsGroup.js';
 import useStats from '../hooks/useStats';
 import { Flex, VStack } from '@chakra-ui/react';
 
